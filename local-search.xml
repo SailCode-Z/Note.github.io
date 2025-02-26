@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/blog/2025/02/27/hello-world/"/>
+    <url>/blog/2025/02/27/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>C++STL容器</title>
+    <link href="/blog/2023/03/14/C++STL%E5%AE%B9%E5%99%A8/"/>
+    <url>/blog/2023/03/14/C++STL%E5%AE%B9%E5%99%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://github.com/opencv/opencv<br></code></pre></td></tr></table></figure><h2 id="安装cmake-gui"><a href="#安装cmake-gui" class="headerlink" title="安装cmake-gui"></a>安装cmake-gui</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get cmake-gui<br></code></pre></td></tr></table></figure><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install build-essential<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev <br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev <br></code></pre></td></tr></table></figure><p>有些包可能有更新找不到，对应替换即可</p><h2 id="cmake配置"><a href="#cmake配置" class="headerlink" title="cmake配置"></a>cmake配置</h2><p><img src="/blog/../img/set_world.jpg" alt="set_world"><br><img src="/blog/../img/set_gtk.jpg" alt="set_gtk"><br>mkdir build  文件夹 cmake-gui 配置搜索world、gtk 勾选</p><h2 id="make-编译"><a href="#make-编译" class="headerlink" title="make 编译"></a>make 编译</h2><blockquote><p>cd build</p></blockquote><blockquote><p>make -j8 ..&#x2F;</p></blockquote><p>编译源码大约5分钟</p><blockquote><p>sudo make install</p></blockquote><p>1、库安装到  &#x2F;usr&#x2F;local 中</p><p>2、将&#x2F;build&#x2F;lib中的.so 库cp 到 &#x2F;usr&#x2F;lib 中</p><h2 id="ubuntu构建OpenCV工程"><a href="#ubuntu构建OpenCV工程" class="headerlink" title="ubuntu构建OpenCV工程"></a>ubuntu构建OpenCV工程</h2><p>Makefile 文件需添加头文件地址，参考</p><p>helloworld:main.cpp</p><p>g++ $+ -o $@ -lopencv_world -I&#x2F;usr&#x2F;local&#x2F;include&#x2F;opencv4</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux安装OpenCV</title>
+    <link href="/blog/2023/03/14/Linux%E5%AE%89%E8%A3%85OpenCV/"/>
+    <url>/blog/2023/03/14/Linux%E5%AE%89%E8%A3%85OpenCV/</url>
+    
+    <content type="html"><![CDATA[<h2 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://github.com/opencv/opencv<br></code></pre></td></tr></table></figure><h2 id="安装cmake-gui"><a href="#安装cmake-gui" class="headerlink" title="安装cmake-gui"></a>安装cmake-gui</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get cmake-gui<br></code></pre></td></tr></table></figure><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install build-essential<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev <br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev <br></code></pre></td></tr></table></figure><p>有些包可能有更新找不到，对应替换即可</p><h2 id="cmake配置"><a href="#cmake配置" class="headerlink" title="cmake配置"></a>cmake配置</h2><p><img src="/blog/../img/set_world.jpg" alt="set_world"><br><img src="/blog/../img/set_gtk.jpg" alt="set_gtk"><br>mkdir build  文件夹 cmake-gui 配置搜索world、gtk 勾选</p><h2 id="make-编译"><a href="#make-编译" class="headerlink" title="make 编译"></a>make 编译</h2><blockquote><p>cd build</p></blockquote><blockquote><p>make -j8 ..&#x2F;</p></blockquote><p>编译源码大约5分钟</p><blockquote><p>sudo make install</p></blockquote><p>1、库安装到  &#x2F;usr&#x2F;local 中</p><p>2、将&#x2F;build&#x2F;lib中的.so 库cp 到 &#x2F;usr&#x2F;lib 中</p><h2 id="ubuntu构建OpenCV工程"><a href="#ubuntu构建OpenCV工程" class="headerlink" title="ubuntu构建OpenCV工程"></a>ubuntu构建OpenCV工程</h2><p>Makefile 文件需添加头文件地址，参考</p><p>helloworld:main.cpp</p><p>g++ $+ -o $@ -lopencv_world -I&#x2F;usr&#x2F;local&#x2F;include&#x2F;opencv4</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
